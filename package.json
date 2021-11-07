@@ -1,8 +1,9 @@
 {
   "name": "react-clipboard-animation",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A simple clipboard animation in react which allows the user to easily copy text.",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -11,9 +12,28 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
+  "keywords": [
+    "react",
+    "react-clipboard",
+    "react-clipboard-text",
+    "react-clipboard-animation",
+    "react-copy-to-clipboard",
+    "react-copy-paste",
+    "clipboard",
+    "clipboard-animation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZaphodElevated/react-clipboard-animation"
+  },
+  "homepage": "https://github.com/ZaphodElevated/react-clipboard-animation#readme",
+  "author": "Pranav Doshi",
+  "bugs": "https://github.com/ZaphodElevated/react-clipboard-animation/issues",
+  "license": "Apache-2.0",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "SET NODE_ENV=production & babel src/lib --out-dir dist --copy-files",
+    "clean": "rd /s /q dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -34,5 +54,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0"
   }
 }
