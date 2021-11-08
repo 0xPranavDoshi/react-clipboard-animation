@@ -9,7 +9,7 @@ export function Clippy(props) {
       viewBox='0 0 16 16'
       fill='none'
       stroke='currentColor'
-      strokeWidth='1.5'
+      strokeWidth='1'
       strokeLinecap='round'
       strokeLinejoin='round'
       {...props}
@@ -28,7 +28,7 @@ export function Check(props) {
       viewBox='0 0 16 16'
       fill='none'
       stroke='currentColor'
-      strokeWidth='1.5'
+      strokeWidth='1'
       strokeLinecap='round'
       strokeLinejoin='round'
       {...props}
@@ -38,7 +38,13 @@ export function Check(props) {
   )
 }
 
-export default function Clipboard({ copied, setCopied, text }) {
+export default function Clipboard({ copied, setCopied, text, color }) {
+  const isColor = (strColor) => {
+    const s = new Option().style
+    s.color = strColor
+    return s.color !== ''
+  }
+
   return (
     <div
       onClick={() => {
@@ -50,6 +56,7 @@ export default function Clipboard({ copied, setCopied, text }) {
       <Clippy
         className='icon'
         style={{
+          color: isColor(color) ? color : 'black',
           strokeDasharray: 50,
           strokeDashoffset: copied ? -50 : 0,
           transition: 'all 300ms ease-in-out',
@@ -58,6 +65,7 @@ export default function Clipboard({ copied, setCopied, text }) {
       <Check
         className='icon'
         style={{
+          color: color ? color : 'black',
           strokeDasharray: 50,
           strokeDashoffset: copied ? 0 : -50,
           transition: 'all 300ms ease-in-out',
