@@ -69,7 +69,7 @@ export default function Clipboard({ copied, setCopied, text, color }) {
       <Check
         className='icon'
         style={{
-          color: color ? color : 'black',
+          color: isColor(color) ? color : 'black',
           strokeDasharray: 50,
           strokeDashoffset: copied ? 0 : -50,
           transition: 'all 300ms ease-in-out',
