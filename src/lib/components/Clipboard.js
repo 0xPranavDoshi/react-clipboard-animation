@@ -4,8 +4,8 @@ import React from 'react'
 export function Clippy(props) {
   return (
     <svg
-      width='16'
-      height='16'
+      width='20'
+      height='20'
       viewBox='0 0 16 16'
       fill='none'
       stroke='currentColor'
@@ -23,8 +23,8 @@ export function Clippy(props) {
 export function Check(props) {
   return (
     <svg
-      width='16'
-      height='16'
+      width='20'
+      height='20'
       viewBox='0 0 16 16'
       fill='none'
       stroke='currentColor'
@@ -40,28 +40,29 @@ export function Check(props) {
 
 export default function Clipboard({ copied, setCopied, text }) {
   return (
-    <button onClick={() => setCopied(true)} className='button'>
-      <div
-        className='clipboard'
-        onClick={() => navigator.clipboard.writeText(text)}
-      >
-        <Clippy
-          className='icon'
-          style={{
-            strokeDasharray: 50,
-            strokeDashoffset: copied ? -50 : 0,
-            transition: 'all 300ms ease-in-out',
-          }}
-        />
-        <Check
-          className='icon'
-          style={{
-            strokeDasharray: 50,
-            strokeDashoffset: copied ? 0 : -50,
-            transition: 'all 300ms ease-in-out',
-          }}
-        />
-      </div>
-    </button>
+    <div
+      onClick={() => {
+        setCopied(true)
+        navigator.clipboard.writeText(text)
+      }}
+      className='button'
+    >
+      <Clippy
+        className='icon'
+        style={{
+          strokeDasharray: 50,
+          strokeDashoffset: copied ? -50 : 0,
+          transition: 'all 300ms ease-in-out',
+        }}
+      />
+      <Check
+        className='icon'
+        style={{
+          strokeDasharray: 50,
+          strokeDashoffset: copied ? 0 : -50,
+          transition: 'all 300ms ease-in-out',
+        }}
+      />
+    </div>
   )
 }
