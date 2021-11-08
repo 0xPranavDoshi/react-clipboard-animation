@@ -40,9 +40,13 @@ export function Check(props) {
 
 export default function Clipboard({ copied, setCopied, text, color }) {
   const isColor = (strColor) => {
-    const s = new Option().style
-    s.color = strColor
-    return s.color !== ''
+    if (strColor === undefined) {
+      return false
+    } else {
+      const s = new Option().style
+      s.color = strColor
+      return s.color !== ''
+    }
   }
 
   return (
