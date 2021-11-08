@@ -98,4 +98,4 @@ function App() {
 
 # License
 
-Apache-2.0
+MIT

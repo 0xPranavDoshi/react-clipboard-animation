@@ -20,7 +20,7 @@
   "homepage": "https://github.com/ZaphodElevated/react-clipboard-animation#readme",
   "author": "Pranav Doshi",
   "bugs": "https://github.com/ZaphodElevated/react-clipboard-animation/issues",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "scripts": {
     "build": "webpack"
   },
