@@ -2,17 +2,7 @@
   "name": "react-clipboard-animation",
   "version": "1.0.4",
   "description": "A simple clipboard animation in react which allows the user to easily copy text.",
-  "main": "dist/index.js",
-  "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
-  },
+  "main": "./lib/clipboard.js",
   "keywords": [
     "react",
     "react-clipboard",
@@ -32,34 +22,22 @@
   "bugs": "https://github.com/ZaphodElevated/react-clipboard-animation/issues",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "SET NODE_ENV=production & babel src/lib --out-dir dist --copy-files",
-    "clean": "rd /s /q dist",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "build": "webpack"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
-    "@babel/preset-react": "^7.16.0"
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.62.1",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "css-loader": "^6.5.1",
+    "prop-types": "^15.7.2",
+    "style-loader": "^3.3.1"
   }
 }
