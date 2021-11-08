@@ -88,13 +88,13 @@ function App() {
 
 # Options
 
-### `text`: Text to be copied.
+#### `text`: Text to be copied.
 
-### `color`: Color of the icons. Default is black.
+#### `color`: Color of the icons. Default is black.
 
-### `copied`: Boolean variable which returns true when the text is copied.
+#### `copied`: Boolean variable which returns true when the text is copied.
 
-### `setCopied`: Function to set the copied variable. Required for checkmark animation to work.
+#### `setCopied`: Function to set the copied variable. Required for checkmark animation to work.
 
 # License
 
