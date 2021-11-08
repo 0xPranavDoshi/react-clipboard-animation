@@ -1,6 +1,6 @@
 {
   "name": "react-clipboard-animation",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "A simple clipboard animation in react which allows the user to easily copy text.",
   "main": "./lib/clipboard.js",
   "keywords": [
