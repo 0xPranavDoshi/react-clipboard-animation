@@ -96,6 +96,10 @@ function App() {
 
 `setCopied` Function to set the copied variable. Required for checkmark animation to work.
 
+# Browser Compatability
+
+
+
 # License
 
 MIT
