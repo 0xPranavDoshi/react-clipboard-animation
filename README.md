@@ -100,6 +100,8 @@ function App() {
 
 ![Clipboard Animation Demo](https://github.com/ZaphodElevated/react-clipboard-animation/blob/main/assets/browser-compatability.png?raw=true)
 
+_Source: https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText_
+
 # License
 
 MIT
