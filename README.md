@@ -98,7 +98,7 @@ function App() {
 
 # Browser Compatability
 
-
+![Clipboard Animation Demo](https://github.com/ZaphodElevated/react-clipboard-animation/blob/main/assets/browser-compatability.png?raw=true)
 
 # License
 
